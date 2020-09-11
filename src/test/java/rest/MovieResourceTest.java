@@ -140,17 +140,15 @@ public class MovieResourceTest {
         .and()
         .body("title",hasItems("The Thing","Escape from New York", "Escape from L.A"));
     }
-    
-//    @Test
-//    public void testGetById() throws Exception {
-//        
-//        given().log().all().get("/movie/0").then().log().body();
-//        
-//        given()
-//        .contentType("application/json")
-//        .get("/movie/1").then()
-//        .assertThat()
-//        .statusCode(HttpStatus.OK_200.getStatusCode())
-//        .body("[1].id", equalTo(movies.get(1).getId())); 
-//    }
+            
+        @Test
+    public void testGetById() throws Exception {
+        given()
+        .contentType("application/json")
+        .get("/movie/"+movies.get(0).getId())
+        .then()
+        .assertThat()
+        .statusCode(HttpStatus.OK_200.getStatusCode())
+        .body("title",equalTo("The Thing"));
+    }
 }

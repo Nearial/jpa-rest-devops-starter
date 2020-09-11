@@ -7,13 +7,13 @@ import entities.Movie;
  */
 public class MovieDTO {
     
-    long id;
-    int year;
+    int id;
+    int Ryear;
     String title;
     
     public MovieDTO(Movie m){
         this.id = m.getId();
-        this.year = m.getYear();
+        this.Ryear = m.getRYear();
         this.title = m.getTitle();
     }
     

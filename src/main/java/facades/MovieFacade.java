@@ -48,7 +48,7 @@ public class MovieFacade {
         }
     }
     
-    public Movie getMovieById(long id){
+    public Movie getMovieById(int id){
          EntityManager em = emf.createEntityManager();
         try{
             Movie employee = em.find(Movie.class,id);

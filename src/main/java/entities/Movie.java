@@ -16,27 +16,27 @@ public class Movie implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private int year;
+    private int id;
+    private int Ryear;
     private String title;
     
     public Movie() {
     }
         
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public int getYear() {
-        return year;
+    public int getRYear() {
+        return Ryear;
     }
 
     public void setYear(int year) {
-        this.year = year;
+        this.Ryear = year;
     }
 
     public String getTitle() {
@@ -47,14 +47,14 @@ public class Movie implements Serializable {
         this.title = title;
     }
 
-    public Movie(int year, String title) {
-        this.year = year;
+    public Movie(int Ryear, String title) {
+        this.Ryear = Ryear;
         this.title = title;
     }
 
     @Override
     public String toString() {
-        return "Movie{" + "year=" + year + ", title=" + title + '}';
+        return "Movie{" + "Ryear=" + Ryear + ", title=" + title + '}';
     }
 
     @Override
@@ -69,7 +69,7 @@ public class Movie implements Serializable {
             return false;
         }
         final Movie other = (Movie) obj;
-        if (this.year != other.year) {
+        if (this.Ryear != other.Ryear) {
             return false;
         }
         if (!Objects.equals(this.title, other.title)) {

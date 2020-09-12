@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>GLORIOUS TITLE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body id="body1">        
+        <div id="div1"></div>
+
+        <form id="form1">
+            <input type="text" id="textfield">
+            <input type="submit" value="addname">
+            <input id="btn1" type="button" value="Remove first">
+            <input id="btn2" type="button" value="Remove last">
+        </form>
+            
+        <script>
+            var array = ["Lars", "Jan", "Peter", "Bo", "Frederik"];
+
+            var listFunc = function (a) {
+                var result = ["<ul>", "</ul>"];
+                var li = array.map(n => "<li>" + n + "</li>");
+
+                result.splice(1, 0, li.join(""));
+
+                return result.join("");
+            };
+            document.getElementById("div1").innerHTML = listFunc(array);
+
+            document.getElementById("form1").addEventListener("submit", function (e) {
+                e.preventDefault();
+                array.push(document.getElementById("textfield").value);
+                document.getElementById("textfield").value = "";
+                document.getElementById("div1").innerHTML = listFunc(array);
+            });
+            
+            document.getElementById("btn1").addEventListener("click", function(){
+               array.shift();
+               document.getElementById("div1").innerHTML = listFunc(array);
+            });
+            
+            document.getElementById("btn2").addEventListener("click", function(){
+               array.pop();
+               document.getElementById("div1").innerHTML = listFunc(array);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Glorious Title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .mydiv
+        </style>
+    </head>
+    <body>        
+        <div id="outer">
+            <div id="1" class="mydiv">Div1</div>
+            <div id="2" class="mydiv">Div2</div>        
+            <div id="3" class="mydiv">Div3</div>
+            <div id="4" class="mydiv">Div4</div>
+            <div id="5" class="mydiv">Div5</div>
+            <div id="6" class="mydiv">Div6</div>
+            <div id="7" class="mydiv">Div7</div>
+            <div id="8" class="mydiv">Div8</div>
+            <div id="9" class="mydiv">Div9</div>
+            <div id="10" class="mydiv">Div10</div>
+            <p id="p1"></p>    
+        </div>
+
+
+        <script>
+            document.getElementById("outer").addEventListener("click", function (e) {
+                p1.innerText = (e.target.id);
+            });
+        </script>
+    </body>
+
+</html>

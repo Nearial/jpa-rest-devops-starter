@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Glorious Title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="1">Div 1</div>
+        <div id="2">Div 2</div>
+        <div id="3">Div 3</div>
+        <button onclick="myfunction()">Click me</button>
+        
+        <script>
+            document.getElementById("1").style.backgroundColor = "#326da8";
+            document.getElementById("2").style.backgroundColor = "#32a892";
+            document.getElementById("3").style.backgroundColor = "#32a6a8";
+            
+            function myfunction(){
+            document.getElementById("1").style.backgroundColor = "#94fc03";
+            document.getElementById("2").style.backgroundColor = "#52fc03";
+            document.getElementById("3").style.backgroundColor = "#a503fc";
+        }
+        </script>
+    </body>
+</html>
